@@ -8,14 +8,14 @@
 	<ui:define name="content">
 		<h:form>
 			<h:dataTable value="#{personBean.ownedBooks}" var="item">
-				<f:facet name="header">Rented cars</f:facet>
+				<f:facet name="header">Wypozyczone ksiazki</f:facet>
 				<h:column>
 					<f:facet name="header">Make</f:facet>
 					<h:outputText value="#{item.make}" />
 				</h:column>
 
 				<h:column>
-					<f:facet name="header">Title</f:facet>
+					<f:facet name="header">Tytul</f:facet>
 					<h:outputText value="#{item.title}" />
 				</h:column>
 
