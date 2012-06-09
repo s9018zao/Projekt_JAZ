@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<ui:define name="content">
+		<h:form id="personForm">
+			<h:panelGrid columns="2">
+
+				<h:outputText value=" Person " />
+				<h:selectOneMenu value="#{BuyBean.personId}">
+					<f:selectItems value="#{BuyBean.allPersons}" var="person"
+						itemValue="#{person.id}" itemLabel="#{person.firstName}" />
+				</h:selectOneMenu>
+
+				<h:outputText value=" Book" />
+				<h:selectOneMenu value="#{BuyBean.bookId}">
+					<f:selectItems value="#{BuyBean.availableBooks}" var="book"
+						itemValue="#{book.id}" itemLabel="#{book.make} #{book.title}" />
+				</h:selectOneMenu>
+
+
+			</h:panelGrid>
+
+			<h:commandButton value="Buy" action="#{BuyBean.BuyBook}" />
+
+			<h:panelGrid>
+				<h:messages id="messages" showDetail="#{true}"
+					showSummary="#{false}" />
+			</h:panelGrid>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
