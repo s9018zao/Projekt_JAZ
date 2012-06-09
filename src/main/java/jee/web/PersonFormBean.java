@@ -44,7 +44,7 @@ public class PersonFormBean implements Serializable {
 	}
 
 	public ListDataModel<Book> getOwnedBooks() {
-		ownedBooks.setWrappedData(pm.getOwnedCars(personToShow));
+		ownedBooks.setWrappedData(pm.getOwnedBooks(personToShow));
 		return ownedBooks;
 	}
 	
@@ -66,9 +66,9 @@ public class PersonFormBean implements Serializable {
 		return "details";
 	}
 	
-	public String disposeCar(){
-		Book carToDispose = ownedBooks.getRowData();
-		bm.disposeBook(personToShow, carToDispose);
+	public String disposeBook(){
+		Book bookToDispose = ownedBooks.getRowData();
+		bm.disposeBook(personToShow, bookToDispose);
 		return null;
 	}
 }

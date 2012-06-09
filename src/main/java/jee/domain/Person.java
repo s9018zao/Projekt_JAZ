@@ -52,7 +52,7 @@ public class Person {
 	public String getSurname() {
 		return surname;
 	}
-	public void setPin(String surname) {
+	public void setSurname(String surname) {
 		this.surname = surname;
 	}
 
@@ -60,8 +60,8 @@ public class Person {
 	public Date getBoughtDate() {
 		return boughtDate;
 	}
-	public void setRegistrationDate(Date registrationDate) {
-		this.boughtDate = registrationDate;
+	public void setBoughtDate(Date boughtDate) {
+		this.boughtDate = boughtDate;
 	}
 
 	// Be careful here, both with lazy and eager fetch type
