@@ -7,7 +7,7 @@
 
 	<ui:define name="content">
 		<h:form>
-			<h:dataTable value="#{personBean.ownedCars}" var="item">
+			<h:dataTable value="#{personBean.ownedBooks}" var="item">
 				<f:facet name="header">Rented cars</f:facet>
 				<h:column>
 					<f:facet name="header">Make</f:facet>
@@ -15,14 +15,14 @@
 				</h:column>
 
 				<h:column>
-					<f:facet name="header">Model</f:facet>
-					<h:outputText value="#{item.model}" />
+					<f:facet name="header">Title</f:facet>
+					<h:outputText value="#{item.title}" />
 				</h:column>
 
 				<h:column>
 					<f:facet name="header">#{msg.action}</f:facet>
 					<h:commandLink value="#{msg.actionDelete}"
-						action="#{personBean.disposeCar}" />
+						action="#{personBean.disposeBook}" />
 				</h:column>
 
 			</h:dataTable>

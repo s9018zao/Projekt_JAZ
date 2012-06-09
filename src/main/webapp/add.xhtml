@@ -15,11 +15,11 @@
 				<h:inputText id="firstName" value="#{personBean.person.firstName}"
 					required="#{true}" />
 
-				<h:outputText value="#{msg.personPinLabel}" />
-				<h:inputText id="pin" value="#{personBean.person.pin}" />
+				<h:outputText value="#{msg.personSurname}" />
+				<h:inputText id="surname" value="#{personBean.person.surname}" />
 
-				<h:outputText value="Registration date" />
-				<rich:calendar value="#{personBean.person.registrationDate}"
+				<h:outputText value="Buying date" />
+				<rich:calendar value="#{personBean.person.boughtDate}"
 					id="calendar" datePattern="dd.MM.yyyy" showApplyButton="#{true}"
 					style="width:200px">
 				</rich:calendar>
