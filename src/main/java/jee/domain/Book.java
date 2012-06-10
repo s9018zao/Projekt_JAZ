@@ -13,7 +13,7 @@ import javax.persistence.NamedQuery;
 public class Book {
 	
 	private Long id;
-	private String make;
+	private String author;
 	private String title;
 	private Boolean bought = false;
 	
@@ -25,11 +25,11 @@ public class Book {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getMake() {
-		return make;
+	public String getAuthor() {
+		return author;
 	}
-	public void setMake(String make) {
-		this.make = make;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 	public String getTitle() {
 		return title;

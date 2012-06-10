@@ -13,7 +13,7 @@ import jee.service.PersonManager;
 import jee.service.BuyingManager;
 
 @SessionScoped
-@Named("saleBean")
+@Named("buyBean")
 public class BuyFormBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -48,7 +48,7 @@ public class BuyFormBean implements Serializable {
 		return pm.getAllPersons();
 	}
 
-	public String sellCar() {
+	public String BuyBook() {
 		bm.BuyBook(personId, bookId);
 		return null;
 	}

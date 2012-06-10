@@ -11,22 +11,22 @@
 		<h:form id="personForm">
 			<h:panelGrid columns="2">
 
-				<h:outputText value=" Person " />
-				<h:selectOneMenu value="#{BuyBean.personId}">
-					<f:selectItems value="#{BuyBean.allPersons}" var="person"
-						itemValue="#{person.id}" itemLabel="#{person.firstName}" />
+				<h:outputText value=" Osoba" />
+				<h:selectOneMenu value="#{buyBean.personId}">
+					<f:selectItems value="#{buyBean.allPersons}" var="person"
+						itemValue="#{person.id}" itemLabel="#{person.surname} #{person.firstName}" />
 				</h:selectOneMenu>
 
-				<h:outputText value=" Book" />
-				<h:selectOneMenu value="#{BuyBean.bookId}">
-					<f:selectItems value="#{BuyBean.availableBooks}" var="book"
-						itemValue="#{book.id}" itemLabel="#{book.make} #{book.title}" />
+				<h:outputText value=" Ksiazka" />
+				<h:selectOneMenu value="#{buyBean.bookId}">
+					<f:selectItems value="#{buyBean.availableBooks}" var="book"
+						itemValue="#{book.id}" itemLabel="#{book.author} #{book.title}" />
 				</h:selectOneMenu>
 
 
 			</h:panelGrid>
 
-			<h:commandButton value="Buy" action="#{BuyBean.BuyBook}" />
+			<h:commandButton value="Wypożycz" action="#{BuyBean.BuyBook}" />
 
 			<h:panelGrid>
 				<h:messages id="messages" showDetail="#{true}"

@@ -1,0 +1,10 @@
+INSERT INTO person(firstName, surname, boughtDate) VALUES ('Janusz', 'Drążek', '2012-01-10')
+INSERT INTO person(firstName, surname, boughtDate) VALUES ('Zbigniew', 'Budyń', '2012-01-10')
+INSERT INTO person(firstName, surname, boughtDate) VALUES ('Joanna', 'Nowak', '2012-01-10')
+
+INSERT INTO book(author, title, bought) VALUES ('Sapkowski', 'krew Elfów ', false)
+INSERT INTO book(author, title, bought) VALUES ('Sienkiewicz', 'Ogniem i Mieczem', false)
+INSERT INTO book(author, title, bought) VALUES ('Łysiak', 'Dobry', false)
+INSERT INTO book(author, title, bought) VALUES ('Hasek', 'Przygody dobrego Wojaka Szwejka', false)
+INSERT INTO book(author, title, bought) VALUES ('Kirst', 'Fabryka oficerów', false)
+INSERT INTO book(author, title, bought) VALUES ('Wharton', 'Ptasiek', false)
