@@ -1,20 +1,20 @@
 body {
    margin: 0;
    padding: 0;
-   background-color:  Gray;
-   font-family: Verdana, sans-serif;
+   background-color:  lightGray;
+   font-family: Verdana;
    font-size: 0.9em;
 }
 
 .heading {
-  padding: 15px;
+  padding: 10px;
   background: #FFFFFF;
   border: 1px solid blue;
-  font-size: 1.6em;
-  font-style: Bold;
+  font-size: 1.4em;
+  font-style: italic;
   font-family: Verdana;
   text-align: center;
-  height: 60px;
+  height: 50px;
 }
 
 .menuAndContent {
@@ -23,14 +23,14 @@ body {
 }
 
 .menu {
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  border: thin solid green;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border: thin solid blue;
   position: absolute;
   left: 10px;
   height: 80%;
-  width: 160px;
+  width: 200px;
   background: #FFFFFF;
   top: 90px;
 }
@@ -39,7 +39,7 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  border: thin solid green;
+  border: thin solid blue;
   background: #FFFFFF;	
   position:absolute;
   left: 225px; 

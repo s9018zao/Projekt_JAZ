@@ -20,13 +20,13 @@
 				<h:outputText value=" Ksiazka" />
 				<h:selectOneMenu value="#{buyBean.bookId}">
 					<f:selectItems value="#{buyBean.availableBooks}" var="book"
-						itemValue="#{book.id}" itemLabel="#{book.author} #{book.title}" />
+						itemValue="#{book.id}" itemLabel="#{book.author} - #{book.title}" />
 				</h:selectOneMenu>
 
 
 			</h:panelGrid>
 
-			<h:commandButton value="Wypożycz" action="#{BuyBean.BuyBook}" />
+			<h:commandButton value="Wypożycz" action="#{buyBean.BuyBook}" />
 
 			<h:panelGrid>
 				<h:messages id="messages" showDetail="#{true}"
