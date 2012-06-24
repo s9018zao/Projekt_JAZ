@@ -11,10 +11,7 @@ package jee.service;
 	import jee.domain.Person;
 
 
-	/* 
-	 * This is a Stateless EJB Bean
-	 * All its methods are transactional
-	 */
+	
 	@Stateless
 	public class BuyingManager {
 
@@ -32,7 +29,7 @@ package jee.service;
 
 		@SuppressWarnings("unchecked")
 		public List<Book> getAvailableBooks() {
-			return em.createNamedQuery("book.unsold").getResultList();
+			return em.createNamedQuery("book.unbought").getResultList();
 		}
 
 		public void disposeBook(Person person, Book book) {
@@ -41,7 +38,7 @@ package jee.service;
 			book = em.find(Book.class, book.getId());
 
 			Book toRemove = null;
-			// lazy loading here (person.getCars)
+			
 			for (Book aBook : person.getBooks())
 				if (aBook.getId().compareTo(book.getId()) == 0) {
 					toRemove = aBook;
@@ -53,6 +50,7 @@ package jee.service;
 			
 			book.setBought(false);
 		}
+		
 	}
 
 

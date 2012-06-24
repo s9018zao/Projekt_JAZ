@@ -50,9 +50,9 @@ public class PersonFormBean implements Serializable {
 	
 	// Actions
 	public String addPerson() {
-		pm.addPerson(person);
+	    pm.addPerson(person);
 		return "showPersons";
-		//return null;
+		
 	}
 
 	public String deletePerson() {

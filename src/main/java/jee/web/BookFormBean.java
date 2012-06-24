@@ -32,8 +32,8 @@ public class BookFormBean implements Serializable {
 	@Inject
 	private BookManager bookM;
 	
-	/*@Inject
-	private BuyingManager bm;*/
+	@Inject
+	private BuyingManager bm;
 
 	public Book getBook() {
 		return book;
@@ -41,38 +41,37 @@ public class BookFormBean implements Serializable {
 	public void setBook(Book book) {
 		this.book = book;
 	}
-	
-	/*public ListDataModel<Person> getAllPersons() {
-		persons.setWrappedData(pm.getAllPersons());
-		return persons;
-	}*/
+	public ListDataModel<Book> getAllBooks() {
+		books.setWrappedData(bookM.getAllBooks());
+		return books;
+	}
 
-	/*public ListDataModel<Book> getOwnedBooks() {
-		ownedBooks.setWrappedData(pm.getOwnedBooks(personToShow));
+	public ListDataModel<Book> getOwnedBooks() {
+		ownedBooks.setWrappedData(bookM.getAllBooks());
 		return ownedBooks;
-	}*/
+	}
 	
 	// Actions
 	public String addBook() {
 		bookM.addBook(book);
-		//return "showBooks";
-		return null;
+		return "showBooks";
+		//return null;
 	}
 
 	public String deleteBook() {
 		Book bookToDelete = books.getRowData();
 		bookM.deleteBook(bookToDelete);
-		return null;
+		return "showBooks";
 	}
-	
-	/*public String showDetails() {
+	/*
+	public String showDetails() {
 		personToShow = persons.getRowData();
 		return "details";
 	}*/
 	
 	/*public String disposeBook(){
 		Book bookToDispose = ownedBooks.getRowData();
-		bm.disposeBook(personToShow, bookToDispose);
+		bookM.disposeBook(bookToShow, bookToDispose);
 		return null;
 	}*/
 }
